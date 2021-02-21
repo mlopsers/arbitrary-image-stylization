@@ -10,6 +10,7 @@ matplotlib = "*"
 tensorflow-hub = "==0.11.0"
 numpy = "*"
 opencv-python = "*"
+fire = "*"
 
 [dev-packages]
 
