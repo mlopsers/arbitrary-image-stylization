@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pycrypto = "==2.6.1"
+tensorflow = "==2.4.1"
+matplotlib = "*"
+tensorflow-hub = "==0.11.0"
+numpy = "*"
+opencv-python = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"
