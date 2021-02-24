@@ -10,7 +10,11 @@ def download_model(output_dir='checkpoint'):
 
     hub_handle = 'https://tfhub.dev/google/magenta/arbitrary-image-stylization-v1-256/2'
     hub_module = hub.load(hub_handle)
-    tf.saved_model.save(hub_module, output_dir)
+
+    signatures = {
+        'serving_default': hub_module.signatures['serving_default']
+    }
+    tf.saved_model.save(hub_module, output_dir, signatures=signatures)
 
 
 if __name__ == '__main__':
